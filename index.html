@@ -6,10 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ejercicios de Javascript para aprender a programar</title>
   <link rel="stylesheet" href="style.css">
+  <script src="./function.js"></script>
 </head>
 <body>
-  
-<script src="./function.js">
-</script>
+  <h1>10 Ejercicios simples de programación</h1>
+  <p>Parte de una serie de 100 días escribiendo código JS</p>
+  <div class="containerMain">
+    <div class="container"><p>Descripción del Ejercicio:</p>
+      <p>Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.</p>
+      <div class="ejercicio">
+        <input type="text" id="saludo" placeholder="Escribe tu nombre">
+        <input type="button" id="saludoBoton" value="Saludar!" onclick="saludar()">
+        <div id="saludoContainer"></div>
+      </div>
+    </div>
+    <div class="container"><p>Descripción del Ejercicio:</p>
+      <p>Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:</p>
+      <div class="ejercicio">
+        <input type="text" id="radio" placeholder="Ingresa el radio">
+        <input type="button" id="areaPerimetroBoton" value="Area y Perimetro" onclick="areaPerimetro()">
+        <div id="areaPerimetroContainer"></div>
+      </div>
+    </div>
+    <div class="container"><p>Descripción del Ejercicio:</p>
+      <p>Escriba un programa que calcule el promedio de 4 notas ingresadas por el usuario:</p>
+      <div class="ejercicio">
+        <input type="text" id="nota1" placeholder="Ingresa la primera nota">
+        <input type="text" id="nota2" placeholder="Ingresa la primera nota">
+        <input type="text" id="nota3" placeholder="Ingresa la primera nota">
+        <input type="text" id="nota4" placeholder="Ingresa la primera nota">
+        <input type="button" id="promedioBoton" value="Obtener Promedio" onclick="obtenerPromedio()">
+        <div id="promedioContainer"></div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
