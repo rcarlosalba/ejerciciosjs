@@ -28,3 +28,29 @@ var obtenerPromedio = () => {
   var resultadoPromedio = ((nota1P + nota2P + nota3P + nota4P) / unidades)
   promedioContainer.innerHTML = "El promedio de las notas ingresadas es: " + resultadoPromedio
 }
+
+var obtenerPulgafas = () => {
+  var centimetros = document.getElementById('ingresoCentimetros')
+  var cmtsToIn = parseInt(centimetros.value)
+  var pulgadas = (cmtsToIn / 2.54)
+  pulgadasContainer.innerHTML = "El valor ingresado es igual a " + pulgadas.toFixed(2) + " pulgadas"
+}
+
+var obtenerInverso = () => {
+  var numberValue = document.getElementById('inversos')
+  var numberOne = numberValue.value[0]
+  var numberTwo = numberValue.value[1]
+  var numberThree = numberValue.value[2]
+  var containerInversos = document.getElementById('containerInversos')
+  containerInversos.innerHTML = "El inverso del valor ingresado es " +numberThree+numberTwo+numberOne
+}
+
+var obtenerHipotenusa = () => {
+  var catetoA = document.getElementById('catetoA')
+  var CA = parseInt(catetoA.value)
+  var catetoB = document.getElementById('catetoB')
+  var CB = parseInt(catetoB.value)
+  var hipotenusaF = Math.sqrt(Math.pow(CA,2) + Math.pow(CB,2))
+  var containerHipotenusa = document.getElementById('containerHipotenusa')
+  containerHipotenusa.innerHTML = "El valor de la Hipotenusa es: " + hipotenusaF.toFixed(2)
+}
