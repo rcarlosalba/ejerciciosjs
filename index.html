@@ -9,63 +9,45 @@
   <script src="./function.js"></script>
 </head>
 <body>
-  <h1>10 Ejercicios simples de programación</h1>
-  <p>Parte de una serie de 100 días escribiendo código JS</p>
-  <div class="containerMain">
-    <div class="container"><p>Descripción del Ejercicio:</p>
-      <p>Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.</p>
-      <div class="ejercicio">
-        <input type="text" id="saludo" placeholder="Escribe tu nombre">
-        <input type="button" id="saludoBoton" value="Saludar!" onclick="saludar()">
-        <div id="saludoContainer"></div>
-      </div>
-    </div>
-    <div class="container"><p>Descripción del Ejercicio:</p>
-      <p>Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:</p>
-      <div class="ejercicio">
-        <input type="text" id="radio" placeholder="Ingresa el radio">
-        <input type="button" id="areaPerimetroBoton" value="Area y Perimetro" onclick="areaPerimetro()">
-        <div id="areaPerimetroContainer"></div>
-      </div>
-    </div>
-    <div class="container"><p>Descripción del Ejercicio:</p>
+  <section>
+    <article>
+      <h2>Saludos</h2>
+      <p> Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.</p>
+      <input type="text" placeholder="Escribe tu nombre" id="nombre">
+      <div id="saludo"> </div>
+      <button onclick="saludo()">Saludar</button>
+    </article>
+    <article>
+      <h2>Círculos</h2>
+      <p>Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área</p>
+      <input type="text" id="radio" placeholder="Ingresa el radio">
+      <div id="areayPerimetro"></div>
+      <button onclick="area()">Muestrame el Área y Perimetro</button>
+    </article>
+    <article>
+      <h2>Promedio</h2>
       <p>Escriba un programa que calcule el promedio de 4 notas ingresadas por el usuario:</p>
-      <div class="ejercicio">
-        <input type="text" id="nota1" placeholder="Ingresa la primera nota">
-        <input type="text" id="nota2" placeholder="Ingresa la segunda nota">
-        <input type="text" id="nota3" placeholder="Ingresa la tercera nota">
-        <input type="text" id="nota4" placeholder="Ingresa la cuarta nota">
-        <input type="button" id="promedioBoton" value="Obtener Promedio" onclick="obtenerPromedio()">
-        <div id="promedioContainer"></div>
-      </div>
-    </div>
-    <div class="container"><p>Descripción del Ejercicio</p>
-      <p>Escriba un programa que convierta de centímetros a pulgadas. Una pulgada es igual a 2.54 centímetros.</p>
-      <div class="ejercicio">
-        <input type="text" id="ingresoCentimetros" placeholder="Ingrese el valor en centimetros">
-        <input type="button" id="cmtsToin" value="Obtener Pulgadas" onclick="obtenerPulgafas()">
-        <div id="pulgadasContainer"></div>
-      </div>
-    </div>
-    <div class="container"><p>Descripción del Ejercicio</p>
-      <p>Ingresa un entero de tres dígitos, y obtendras el número con los dígitos en orden inverso:</p>
-      <div class="ejercicio">
-        <input type="text" id="inversos" placeholder="Ingresa un valor de tres digitos">
-        <input type="button" id="aInversos" value="obtener inverso" onclick="obtenerInverso()">
-        <div id="containerInversos"></div>
-      </div>
-    </div>
-    <div class="container"><p>Descripcón del ejercicio</p>
-      <p>Ingresa las longitudes de los dos catetos a y b de un triángulo rectángulo, y como devolveré el largo de la hipotenusa c del triangulo</p>
-      <div class="ejercicio">
-        <input type="text" id="catetoA" placeholder="Ingresa el valor de A">
-        <input type="text" id="catetoB" placeholder="Inversa el valor de B">
-        <input type="button" id="hipotenusa" value="Obtener Hipotenusa" onclick="obtenerHipotenusa()">
-        <div id="containerHipotenusa">
-
-        </div>
-      </div>
-    </div>
-  </div>
+      <input type="text" placeholder="Primera nota" id="n1">
+      <input type="text" placeholder="Segunda nota" id="n2">
+      <input type="text" placeholder="Tercera nota" id="n3">
+      <input type="text" placeholder="Cuarta nota" id="n4">
+      <div id="mostrarPromedio"></div>
+      <button onclick="promedio()">Mostrar promedio</button>
+    </article>
+    <article>
+      <h2>Conversión de unidades de longitud</h2>
+      <p>Escriba un programa que convierta de centímetros a pulgadas.</p>
+      <input type="text" placeholder="Ingrese longitid" id="cm">
+      <div id="longitud"></div>
+      <button onclick="longitud()">Mostrar la logitud en Pulgadas</button>
+    </article>
+    <article>
+      <h2>Número invertido</h2>
+      <p>Escriba un programa que pida al usuario un entero de tres dígitos, y entregue el número con los dígitos en orden inverso</p>
+      <input type="text" placeholder="Ingresa un número de tres dígitos" id="original">
+      <div id="mostrarInverso"></div>
+      <button onclick="mostrarInverso()">Mostrar Inverso</button>
+    </article>
+  </section>
 </body>
 </html>
