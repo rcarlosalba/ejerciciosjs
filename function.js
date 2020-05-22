@@ -40,3 +40,66 @@ function mostrarInverso() {
   let mostrarInverso = document.getElementById('mostrarInverso')
   mostrarInverso.innerHTML = `El inverso del número es: ${original.charAt(2)}${original.charAt(1)}${original.charAt(0)}`
 }
+
+function obtenerHipotenusa() {
+  let a = document.getElementById('catA')
+  a = parseInt(a.value)
+  let b = document.getElementById('catB')
+  b = parseInt(b.value)
+  let c = Math.sqrt((a**2)+(b**2)).toFixed(2)
+  let hipotenusa = document.getElementById('hipotenusa')
+  hipotenusa.innerHTML = `El valor de la hipitenusa es ${c}`
+}
+
+function horaFutura() {
+  let boxHoraActual = document.getElementById('horaActual')
+  let hActual = new Date()
+  boxHoraActual.innerHTML = `Actualmente son las: ${(hActual.getHours())}Hrs.`
+  let cantidadH = document.getElementById('cantidadHoras')
+  cantidadH = parseInt(cantidadH.value)
+  let horaFutura = document.getElementById('horaFutura')
+  if (cantidadH <= 23) {
+    horaFutura.innerHTML = `En ${cantidadH} horas serán las: ${(hActual.getHours()) + cantidadH}`
+  }else{
+    let operacion = (cantidadH % 12) + (hActual.getHours())
+    horaFutura.innerHTML = `En ${cantidadH} horas serán las: ${operacion}Hrs.`
+  }
+}
+
+function Decimal() {
+  let mostrarDecimal = document.getElementById('mostrarDecimal')
+  let valorADecimal = document.getElementById('valorADecimal')
+  valorADecimal = Number(valorADecimal.value)
+  let entero = Math.trunc(valorADecimal)
+  let decimal = Number((valorADecimal - entero).toFixed(2))
+  mostrarDecimal.innerHTML = `El valor decimal es: ${decimal}`
+}
+
+function obtenerC3() {
+  let c1 = document.getElementById('c1')
+  c1 = Number(c1.value)
+  let c2 = document.getElementById('c2')
+  c2 = Number(c2.value)
+  let l1 = document.getElementById('l1')
+  l1 = Number(l1.value)
+  let c3 = document.getElementById('c3')
+  let r1 = ((c1 + c2 ) * 70) / 300
+  let r2 = r1 + ((l1 * 30) / 100)
+  let need = Math.ceil((r2 * 100) / 60)
+
+  if (r2 >= 60) {
+    c3.innerHTML = `Puedes estar tranquilo cualquier resultado te permite aprobar`
+  }else{
+    c3.innerHTML = `Necesitas una nota minima de ${need} para aprobar con el mínimo`
+  }
+}
+
+function sumaDeExtremos() {
+  let serie = document.getElementById('serie')
+  serie = serie.value
+  let caja = document.getElementById('sumaDeExtremos')
+  for (let i = 0; i < serie.length; i++) {
+     let suma = (serie[0]) + (serie[serie.length - 1])
+     caja.innerHTML = `La suma de los extremos es ${suma}`
+  }
+}
