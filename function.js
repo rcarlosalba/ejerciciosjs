@@ -103,3 +103,80 @@ function sumaDeExtremos() {
      caja.innerHTML = `La suma de los extremos es ${suma}`
   }
 }
+
+function determinarPar() {
+  let number = document.getElementById('number')
+  number = parseInt(number.value)
+  let numberBox = document.getElementById('numberBox')
+  let operacion = number % 2
+  if(operacion === 0){
+    numberBox.innerHTML = `El ${number} es un numero par`
+  }else{
+    numberBox.innerHTML = `El ${number} es un numero impar`
+  }
+}
+function determinarBisiesto() {
+  let anio = document.getElementById('anio')
+  anio = parseInt(anio.value)
+  let anioBox = document.getElementById('anioBox')
+  let bi = anio % 4
+  let biC = Math.ceil(anio / 100)
+  biC = (biC % 4)
+  let anotherBi = (anio % 100)
+  if (anio <= 1582) {
+    if (bi === 0 || anotherBi === 0) {
+      anioBox.innerHTML = `${anio} fue un año bisiesto`
+    }else{
+      anioBox.innerHTML = `${anio} No fue un año bisiesto`
+    }
+  }else if(bi === 0 && biC === 0){
+    anioBox.innerHTML = `${anio} es un año bisiesto`
+  }else{
+    anioBox.innerHTML = `${anio} No es un año bisiesto`
+  }
+}
+
+function divisionExacta(){
+  let dividendo = document.getElementById('dividendo')
+  dividendo = parseInt(dividendo.value)
+  let divisor = document.getElementById('divisor')
+  divisor = parseInt(divisor.value)
+  let divisionBox = document.getElementById('divisionBox')
+  let modulo = dividendo % divisor
+  let cocienteF = Math.floor(dividendo / divisor)
+  if (modulo === 0) {
+    divisionBox.innerHTML =`La división es exacta. Cociente ${cocienteF} residuo ${modulo}`
+  }else{
+    divisionBox.innerHTML =`La división no es exacta. Cociente ${cocienteF} residuo ${modulo}`
+  }
+}
+
+function diferenciaPalabras(){
+  let pWorld = document.getElementById('pWorld')
+  let sWorld = document.getElementById('sWorld')
+  let dp = document.getElementById('diferenciaPalabras')
+  pNWorld = pWorld.textLength
+  sNWorld = sWorld.textLength
+  let letrasMas = pNWorld - sNWorld
+  let letrasMenos = sNWorld - pNWorld
+  if (pNWorld > sNWorld) {
+    dp.innerHTML = `"${pWorld.value}" es mayor que "${sWorld.value}" tiene ${letrasMas} letras más`
+  }if(pNWorld == sNWorld){
+    dp.innerHTML = `"${pWorld.value}" es igual que "${sWorld.value}" tiene la misma cantidad de letras.`
+  }else{
+    dp.innerHTML = `"${sWorld.value}" es mayor que "${pWorld.value}" tiene ${letrasMenos} letras más`
+  }
+}
+
+function muestraRango(){
+  let firstN = document.getElementById('firstNumber') 
+  firstN = parseInt(firstN.value)
+  let secondN = document.getElementById('secondNumber') 
+  secondN = parseInt(secondN.value)
+  let compara = document.getElementById('comparaNumeros')
+  if(secondN < firstN){
+    compara.innerHTML = `El numero ${secondN} se encuentra en el rango, Gracias!`
+  }else{
+    compara.innerHTML = `El numero ${secondN} excede el límite permitido`
+  }
+}
