@@ -180,3 +180,128 @@ function muestraRango(){
     compara.innerHTML = `El numero ${secondN} excede el límite permitido`
   }
 }
+
+function mostrarOrden(){
+  let n1 = document.getElementById('orderF')
+  n1 = parseInt(n1.value)
+  let n2 = document.getElementById('orderS')
+  n2 = parseInt(n2.value)
+  let orden = document.getElementById('ordenados')
+  let numbers=[n1, n2]
+  
+  orden.innerHTML = `El los valores ordenados son: ${numbers.sort()}`
+}
+
+function mostrarOrden2(){
+  let order2F = document.getElementById('order2F')
+  order2F = parseInt(order2F.value)
+  let order2S = document.getElementById('order2S')
+  order2S = parseInt(order2S.value)
+  let order2T = document.getElementById('order2T')
+  order2T = parseInt(order2T.value)
+  let orden = document.getElementById('ordenados2')
+  let numbers=[order2F, order2S, order2T]
+  orden.innerHTML = `El los valores ordenados son: ${numbers.sort()}`
+}
+
+document.addEventListener('keyup', determinarCaracter)
+function determinarCaracter(ev){
+  let caracter = document.getElementById('caracter')
+  let caracterBox = document.getElementById('determinarCaracter')
+  var teclas = {
+      CERO: 96,
+      UNO: 97,
+      DOS: 98,
+      TRES: 99, 
+      CUATRO: 100,
+      CINCO: 101, 
+      SEIS: 102,
+      SIETE: 103,
+      OCHO: 104,
+      NUEVE: 105
+  }
+  switch (ev.keyCode) {
+    case teclas.CERO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.DOS:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.TRES:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;  
+    case teclas.CUATRO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    case teclas.UNO:
+      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+      break;
+    default:
+      caracterBox.innerHTML = `La tecla presionada no es número ni letra`
+      break;
+  }
+}
+
+function suma(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 + cifra2}`
+}
+function resta(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 - cifra2}`
+}
+function multiplicacion(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 * cifra2}`
+}
+function division(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 / cifra2}`
+}
+function potencia(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 ** cifra2}`
+}
+function modulo(){
+  let cifra1 = document.getElementById('cifra1')
+  cifra1 = parseInt(cifra1.value)
+  let cifra2 = document.getElementById('cifra2')
+  cifra2 = parseInt(cifra2.value)
+  let showAnswer = document.getElementById('showAnswer')
+  showAnswer.innerHTML = `El resultado de la suma es ${cifra1 % cifra2}`
+}
