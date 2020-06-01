@@ -208,52 +208,84 @@ document.addEventListener('keyup', determinarCaracter)
 function determinarCaracter(ev){
   let caracter = document.getElementById('caracter')
   let caracterBox = document.getElementById('determinarCaracter')
-  var teclas = {
+  let teclas = {
       CERO: 96,
+      CERO2: 48,
       UNO: 97,
+      UNO2: 49,
       DOS: 98,
+      DOS2: 50,
       TRES: 99, 
+      TRES2: 51,
       CUATRO: 100,
+      CUATRO2: 52,
       CINCO: 101, 
+      CINCO2: 53,
       SEIS: 102,
+      SEIS2: 54,
       SIETE: 103,
+      SIETE2: 55,
       OCHO: 104,
-      NUEVE: 105
+      OCHO2: 56,
+      NUEVE: 105,
+      NUEVE2: 57,
   }
-  switch (ev.keyCode) {
-    case teclas.CERO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.DOS:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.TRES:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;  
-    case teclas.CUATRO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    case teclas.UNO:
-      caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
-      break;
-    default:
-      caracterBox.innerHTML = `La tecla presionada no es número ni letra`
-      break;
+  let chartUP = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+  let chartLOW = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z']
+  for (let i = 0; i < 27; i++) {
+    if (caracter.value === chartUP[i]) {
+      debugger
+      caracterBox.innerHTML = `Presionaste la letra ${caracter.value} en mayuscula`
+    }if (caracter.value === chartLOW[i]) {
+      debugger
+      caracterBox.innerHTML = `Presionaste la letra ${caracter.value} en miniscula`
+    } else {
+      switch (ev.keyCode) {
+        case teclas.CERO:
+        case teclas.CERO2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.UNO:
+        case teclas.UNO2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.DOS:
+        case teclas.DOS2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.TRES:
+        case teclas.TRES2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;  
+        case teclas.CUATRO:
+        case teclas.CUATRO2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.CINCO:
+        case teclas.CINCO2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.SEIS:
+        case teclas.SEIS2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.SIETE:
+        case teclas.SIETE2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.OCHO:
+        case teclas.OCHO2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        case teclas.NUEVE:
+        case teclas.NUEVE2:
+          caracterBox.innerHTML = `Presionaste el número ${caracter.value}`
+          break;
+        default:
+          caracterBox.innerHTML = `La tecla presionada no es número ni letra`
+          break;
+      }
+    }
   }
 }
 
