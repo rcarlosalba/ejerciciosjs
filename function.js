@@ -93,7 +93,7 @@ function obtenerC3() {
     c3.innerHTML = `Necesitas una nota minima de ${need} para aprobar con el mínimo`
   }
 }
-
+// Suma de Extremos -- Pendiente de resolver
 function sumaDeExtremos() {
   let serie = document.getElementById('serie')
   serie = serie.value
@@ -164,7 +164,7 @@ function diferenciaPalabras(){
   }if(pNWorld == sNWorld){
     dp.innerHTML = `"${pWorld.value}" es igual que "${sWorld.value}" tiene la misma cantidad de letras.`
   }else{
-    dp.innerHTML = `"${sWorld.value}" es mayor que "${pWorld.value}" tiene ${letrasMenos} letras más`
+    dp.innerHTML = `"${sWorld.value}" es menor que "${pWorld.value}" tiene ${Math.abs(letrasMenos)} letras de menos`
   }
 }
 
@@ -203,7 +203,7 @@ function mostrarOrden2(){
   let numbers=[order2F, order2S, order2T]
   orden.innerHTML = `El los valores ordenados son: ${numbers.sort()}`
 }
-
+// Obtener caracter -- Pendiente de Resolver
 document.addEventListener('keyup', determinarCaracter)
 function determinarCaracter(ev){
   let caracter = document.getElementById('caracter')
@@ -336,4 +336,15 @@ function modulo(){
   cifra2 = parseInt(cifra2.value)
   let showAnswer = document.getElementById('showAnswer')
   showAnswer.innerHTML = `El resultado de la suma es ${cifra1 % cifra2}`
+}
+function calcularEdad() {
+  let dia = document.getElementById('dateDia')
+  dia = parseInt(dia.value)
+  let mes = document.getElementById('dateMes')
+  mes = parseInt(mes.value)
+  let anio = document.getElementById('dateAnio')
+  anio = parseInt(anio.value)
+  let dateBox = document.getElementById('dateBox')
+  let currectDate = new Date()
+  dateBox.innerHTML = `Usted tiene: ${currectDate.getFullYear() - anio} años ${Math.abs((currectDate.getMonth()+1) - mes)} meses y ${Math.abs(currectDate.getDay() - dia)} días.`
 }
