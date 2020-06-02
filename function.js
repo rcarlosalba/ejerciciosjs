@@ -93,15 +93,18 @@ function obtenerC3() {
     c3.innerHTML = `Necesitas una nota minima de ${need} para aprobar con el mínimo`
   }
 }
-// Suma de Extremos -- Pendiente de resolver
+
 function sumaDeExtremos() {
   let serie = document.getElementById('serie')
   serie = serie.value
+  let x = serie.split(',')
   let caja = document.getElementById('sumaDeExtremos')
-  for (let i = 0; i < serie.length; i++) {
-     let suma = (serie[0]) + (serie[serie.length - 1])
+  console.log(serie.split(','))
+
+  for (let i = 0; i < x.length; i++) {
+     let suma = parseInt(x[0]) + parseInt(x[x.length-1])
      caja.innerHTML = `La suma de los extremos es ${suma}`
-  }
+  } 
 }
 
 function determinarPar() {
